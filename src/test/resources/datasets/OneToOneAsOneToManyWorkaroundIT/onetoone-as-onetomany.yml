@@ -1,0 +1,10 @@
+
+warehouse_one_to_one:
+  - id: 1000
+    code: warehouseOneToOne_A
+
+market_one_to_one:
+  - id: 1200
+    code: marketOneToOne_A
+    warehouse_one_to_one_id: 1000
+

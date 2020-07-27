@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+    <changeSet id="warehousepkjoin_column" author="ka">
+        <sql>
+            CREATE TABLE WAREHOUSEPKJOIN_COLUMN (ID BIGSERIAL NOT NULL, CODE VARCHAR(255), DESCRIPTION VARCHAR(255),
+            PRIMARY KEY (ID))
+        </sql>
+    </changeSet>
+
+    <changeSet id="marketpkjoin_column" author="ka">
+        <sql>
+            CREATE TABLE MARKETPKJOIN_COLUMN (ID BIGSERIAL NOT NULL, CODE VARCHAR(255) NOT NULL,
+            DESCRIPTION VARCHAR(255), WAREHOUSEPKJOINCOLUMN_ID INT8 NOT NULL, PRIMARY KEY (ID))
+        </sql>
+    </changeSet>
+</databaseChangeLog>

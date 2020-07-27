@@ -1,0 +1,3 @@
+properties:
+  schema: PUBLIC
+  caseSensitiveTableNames: true

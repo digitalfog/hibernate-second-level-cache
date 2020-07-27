@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd">
+
+
+    <changeSet id="warehouse" author="ka">
+        <sql>
+            CREATE TABLE WAREHOUSE (ID BIGSERIAL NOT NULL, CODE VARCHAR(255), DESCRIPTION VARCHAR(255), PRIMARY KEY
+            (ID))
+        </sql>
+    </changeSet>
+
+    <changeSet id="store" author="ka">
+        <sql>
+            CREATE TABLE STORE (ID BIGSERIAL NOT NULL, CODE VARCHAR(255), DESCRIPTION VARCHAR(255), TIME_ZONE
+            VARCHAR(255), MARKET_ID INT8 NOT NULL, PRIMARY KEY (ID))
+        </sql>
+    </changeSet>
+
+    <changeSet id="market" author="ka">
+        <sql>
+            CREATE TABLE MARKET (ID BIGSERIAL NOT NULL, WAREHOUSE_ID INT8 NOT NULL, CODE VARCHAR(255) NOT NULL,
+            DESCRIPTION VARCHAR(255), PRIMARY KEY (ID))
+        </sql>
+    </changeSet>
+
+</databaseChangeLog>

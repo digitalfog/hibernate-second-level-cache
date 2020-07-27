@@ -1,0 +1,17 @@
+
+
+warehouse:
+  - id: 100
+    code: warehouse_A
+
+market:
+  - id: 300
+    code: market_A
+    warehouse_id: 100
+
+store:
+  - id: 400
+    code: store_A
+    market_id: 300
+
+

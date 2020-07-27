@@ -1,0 +1,10 @@
+
+warehousepkjoin_column:
+  - id: 200
+    code: warehousePKJoinColumn_A
+
+marketpkjoin_column:
+  - id: 200
+    code: marketPKJoinColumn_A
+    warehousepkjoincolumn_id: 200
+

@@ -1,0 +1,21 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        javax:
+          cache:
+            provider: org.ehcache.jsr107.EhcacheCachingProvider
+            uri: classpath://ehcache.xml
+        cache:
+          use_query_cache: true
+          region.factory_class: org.hibernate.cache.jcache.JCacheRegionFactory
+      javax.persistence.sharedCache.mode: ENABLE_SELECTIVE
+  datasource:
+    url: ${db_url}
+    username: ${db_username}
+    password: ${db_password}
+    driver-class-name: org.postgresql.Driver
